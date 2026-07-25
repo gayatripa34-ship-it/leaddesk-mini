@@ -56,7 +56,7 @@ export async function POST(req: Request) {
     const newLead = await Lead.create({
       name,
       email,
-      budget,
+      budget: Number(budget),
       message,
       status: 'New',
     });
